@@ -1,6 +1,15 @@
 from django.shortcuts import render
 
-content = {}
+content = {
+    'links_main_menu': [
+        {'href': 'main', 'name': 'домой'},
+        {'href': 'products', 'name': 'продукты'},
+        {'href': 'contact', 'name': 'контакты'},
+    ]
+    # 'title': title,
+    # 'links_menu': links_menu,
+    # 'same_products': same_products
+}
 
 
 def main(request):
@@ -16,4 +25,4 @@ def contact(request):
 
 
 def tmp_url(request):
-    return render(request, 'mainapp/base.html')
+    return render(request, 'mainapp/new_index.html', content)

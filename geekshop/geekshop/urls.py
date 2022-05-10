@@ -22,5 +22,5 @@ urlpatterns = [
     path('products/', mainapp.products, name='products'),
     path('contact/', mainapp.contact, name='contact'),
     path('', mainapp.main, name='main'),
-    path('tmp_url', mainapp.tmp_url, name='tmp_url'),
+    path('tmp_url/', mainapp.tmp_url, name='tmp_url'),
 ]
