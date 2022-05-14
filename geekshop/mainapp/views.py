@@ -11,10 +11,10 @@ content = {
 
 
 def main(request):
-    # own_content = {
-    #     'title': title,
-    # }
-    # content.update(own_content)
+    own_content = {
+        'title': 'магазин',
+    }
+    content.update(own_content)
     return render(request, 'mainapp/index.html', content)
 
 
