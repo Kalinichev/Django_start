@@ -36,7 +36,7 @@ def contact(request):
 
 def tmp_url(request):
     own_content = {
-        'title': "магазин",
+        'title': 'контакты',
     }
     content.update(own_content)
     return render(request, 'mainapp/new_index.html', content)
