@@ -19,24 +19,46 @@ def main(request):
 
 
 def products(request):
-    # own_content = {
-    #     'title': title,
-    #     'links_menu': links_menu,
-    #     'same_products': same_products,
-    # }
+    links_menu = [
+        {'href': 'products_all', 'name': 'все'},
+        {'href': 'products_home', 'name': 'дом'},
+        {'href': 'products_office', 'name': 'офис'},
+        {'href': 'products_modern', 'name': 'модерн'},
+        {'href': 'products_classic', 'name': 'классика'},
+    ]
+
+    own_content = {
+        'title': 'продукты',
+        'links_menu': links_menu,
+        # 'same_products': same_products,
+    }
+
+    content.update(own_content)
     return render(request, 'mainapp/products.html', content)
 
 
 def contact(request):
-    # own_content = {
-    #     'title': title,
-    # }
+    own_content = {
+        'title': 'контакты',
+    }
+    content.update(own_content)
     return render(request, 'mainapp/contact.html', content)
 
 
 def tmp_url(request):
+    links_menu = [
+        {'href': 'products_all', 'name': 'все'},
+        {'href': 'products_home', 'name': 'дом'},
+        {'href': 'products_office', 'name': 'офис'},
+        {'href': 'products_modern', 'name': 'модерн'},
+        {'href': 'products_classic', 'name': 'классика'},
+    ]
+
     own_content = {
-        'title': 'контакты',
+        'title': 'продукты',
+        'links_menu': links_menu,
+        # 'same_products': same_products,
     }
+
     content.update(own_content)
     return render(request, 'mainapp/new_index.html', content)
