@@ -16,15 +16,13 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 import mainapp.views as mainapp
 
 
-
 urlpatterns = [
+    path('shop/', include('mainapp.urls')),
     path('admin/', admin.site.urls),
-    path('products/', mainapp.products, name='products'),
-    path('contact/', mainapp.contact, name='contact'),
     path('', mainapp.main, name='main'),
     path('tmp_url/', mainapp.tmp_url, name='tmp_url'),
 ]

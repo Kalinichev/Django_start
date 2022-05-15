@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .models import Product
+
 content = {
     'main_menu': [
         {'href': 'main', 'name': 'домой'},
@@ -11,8 +13,12 @@ content = {
 
 
 def main(request):
+    title = 'Главная'
+    products = Product.objects.all()
+
     own_content = {
-        'title': 'магазин',
+        'title': title,
+        'products': products,
     }
     content.update(own_content)
     return render(request, 'mainapp/index.html', content)
