@@ -18,12 +18,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 import mainapp.views as mainapp
-
+from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('shop/', include('mainapp.urls')),
+    path('', RedirectView.as_view(url='shop/')),
+    path('shop/', include(('mainapp.urls', 'shop'), namespace='shop')),
     path('admin/', admin.site.urls),
-    path('', mainapp.main, name='main'),
     path('tmp_url/', mainapp.tmp_url, name='tmp_url'),
 ]
 

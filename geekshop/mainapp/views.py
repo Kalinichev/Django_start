@@ -1,12 +1,12 @@
 from django.shortcuts import render
 
-from .models import Product
+from .models import Product, ProductCategory
 
 content = {
     'main_menu': [
-        {'href': 'main', 'name': 'домой'},
-        {'href': 'products', 'name': 'продукты'},
-        {'href': 'contact', 'name': 'контакты'},
+        {'href': 'shop:main', 'name': 'домой'},
+        {'href': 'shop:products', 'name': 'продукты'},
+        {'href': 'shop:contact', 'name': 'контакты'},
     ]
 
 }
@@ -24,7 +24,7 @@ def main(request):
     return render(request, 'mainapp/index.html', content)
 
 
-def products(request):
+def products(request, pk=None):
     links_menu = [
         {'href': 'products_all', 'name': 'все'},
         {'href': 'products_home', 'name': 'дом'},
