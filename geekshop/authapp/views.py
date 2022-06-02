@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib import auth
+from django.urls import reverse
 
-# Create your views here.
+
+def login():
+    title = 'Вход'
+    pass
+    # login_form =
+
+
+def logout():
+    pass
