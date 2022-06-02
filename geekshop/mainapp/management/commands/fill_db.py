@@ -30,6 +30,6 @@ class Command(BaseCommand):
             new_product = Product(**product)
             new_product.save()
 
-            super_user = User.objects.create_superuser('boss', 'boss@supershop.local', 'ZaQ1@wSx')
+            super_user = User.objects.create_superuser('boss', 'boss@supershop.local', 'ZaQ1@wSx', age=34)
 
 

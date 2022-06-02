@@ -24,7 +24,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='shop/')),
     path('shop/', include(('mainapp.urls', 'shop'), namespace='shop')),
     path('admin/', admin.site.urls),
-    path('auth/', include(('mainapp.urls', 'auth'), namespace='auth')),
+    path('auth/', include(('authapp.urls', 'auth'), namespace='auth')),
     path('tmp_url/', mainapp.tmp_url, name='tmp_url'),
 ]
 
