@@ -50,21 +50,3 @@ def contact(request):
     content.update(own_content)
     return render(request, 'mainapp/contact.html', content)
 
-
-def tmp_url(request):
-    links_menu = [
-        {'href': 'products_all', 'name': 'все'},
-        {'href': 'products_home', 'name': 'дом'},
-        {'href': 'products_office', 'name': 'офис'},
-        {'href': 'products_modern', 'name': 'модерн'},
-        {'href': 'products_classic', 'name': 'классика'},
-    ]
-
-    own_content = {
-        'title': 'продукты',
-        'links_menu': links_menu,
-        # 'same_products': same_products,
-    }
-
-    content.update(own_content)
-    return render(request, 'mainapp/new_index.html', content)

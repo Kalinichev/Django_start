@@ -25,7 +25,6 @@ urlpatterns = [
     path('shop/', include(('mainapp.urls', 'shop'), namespace='shop')),
     path('admin/', admin.site.urls),
     path('auth/', include(('authapp.urls', 'auth'), namespace='auth')),
-    path('tmp_url/', mainapp.tmp_url, name='tmp_url'),
 ]
 
 if settings.DEBUG:
