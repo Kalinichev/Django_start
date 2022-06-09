@@ -21,7 +21,7 @@ import mainapp.views as mainapp
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='shop/')),
+    path('', RedirectView.as_view(url='shop/'), name='main'),
     path('shop/', include(('mainapp.urls', 'shop'), namespace='shop')),
     path('admin/', admin.site.urls),
     path('auth/', include(('authapp.urls', 'auth'), namespace='auth')),
