@@ -36,7 +36,7 @@ def products(request, pk=None):
             category = {'name': 'все'}
         else:
             category = get_object_or_404(ProductCategory, pk=pk)
-            products = Product.objects.filter(category__pk=pk)
+            products = Product.objects.filter(category__pk=pk).order_by('price')
 
         own_content = {
             'title': title,
@@ -58,6 +58,7 @@ def products(request, pk=None):
 
     content.update(own_content)
     return render(request, 'mainapp/products.html', content)
+
 
 def contact(request):
     own_content = {

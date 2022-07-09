@@ -1,3 +1,9 @@
 [
-  {"category": "Дом", "name": "Суперстул", "price": 39999, "quantity": 20}
+  {"category": "Дом", "name": "Суперстул", "price": 39000, "quantity": 20},
+  {"category": "Дом", "name": "Комфорт+", "price": 24000, "quantity": 45},
+  {"category": "Офис", "name": "Космостул", "price": 174000, "quantity": 3},
+  {"category": "Офис", "name": "BossChair", "price": 500000, "quantity": 2},
+  {"category": "Офис", "name": "T-Super Gaming Edidtion", "price": 18000, "quantity": 40},
+  {"category": "Модерн", "name": "Круглый квадрат", "price": 83000, "quantity": 6},
+  {"category": "Классика", "name": "Classic", "price": 9999, "quantity": 84}
 ]
