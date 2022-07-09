@@ -14,21 +14,21 @@ def load_from_json(file_name):
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        categories = load_from_json('categories')
+    #     categories = load_from_json('categories')
+    #
+    #     ProductCategory.objects.all().delete()
+    #     for category in categories:
+    #         new_category = ProductCategory(**category)
+    #         new_category.save()
+    #
+    #     products = load_from_json('products')
+    #
+    #     Product.objects.all().delete()
+    #     for product in products:
+    #         category_name = product['category']
+    #         _category = ProductCategory.objects.get(name=category_name)
+    #         product['category'] = _category
+    #         new_product = Product(**product)
+    #         new_product.save()
 
-        ProductCategory.objects.all().delete()
-        for category in categories:
-            new_category = ProductCategory(**category)
-            new_category.save()
-
-        products = load_from_json('products')
-
-        Product.objects.all().delete()
-        for product in products:
-            category_name = product['category']
-            _category = ProductCategory.objects.get(name=category_name)
-            product['category'] = _category
-            new_product = Product(**product)
-            new_product.save()
-
-        # super_user = ShopUser.objects.create_superuser('boss', 'boss@supershop.local', 'ZaQ1@wSx', age=34)
+        super_user = ShopUser.objects.create_superuser('boss', 'boss@supershop.local', 'ZaQ1@wSx', age=34)
