@@ -4,9 +4,9 @@ from django.shortcuts import get_object_or_404
 
 content = {
     'main_menu': [
-        {'href': 'shop:main', 'name': 'домой'},
-        {'href': 'shop:products', 'name': 'продукты'},
-        {'href': 'shop:contact', 'name': 'контакты'},
+        {'href': 'shop:main', 'url': 'main', 'name': 'домой'},
+        {'href': 'shop:products', 'url': 'products', 'name': 'продукты'},
+        {'href': 'shop:contact', 'url': 'contact', 'name': 'контакты'},
     ]
 
 }
@@ -46,9 +46,9 @@ def products(request, pk=None):
         }
 
         content.update(own_content)
-        return render(request, 'mainapp/products.html', content)
+        return render(request, 'mainapp/products_list.html', content)
 
-    same_products = Product.objets.all()[3:5]
+    same_products = Product.objects.all()[3:5]
 
     own_content = {
         'title': title,
